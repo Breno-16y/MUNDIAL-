@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <header>
+        <nav>
+            <div class="logo">MeuSite</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Cabeçalho com Imagem -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Bem-vindo ao Meu Site!</h1>
+            <p>Esse site se adapta a qualquer tamanho de tela.</p>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="content">
+            <h2>Sobre Nós</h2>
+            <p>Este é um exemplo de site responsivo criado para se ajustar a diferentes dispositivos.</p>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <div class="content">
+            <h2>Contato</h2>
+            <p>Você pode entrar em contato conosco através do formulário abaixo.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MeuSite. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
