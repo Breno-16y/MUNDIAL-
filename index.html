@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Genérico</title>
+    <title>Login - Site Genérico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
+    <!-- Página de Login -->
+    <section id="login" class="login-page">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cabeçalho (Apresentado após login) -->
+    <header id="header" class="hidden">
         <nav>
             <div class="logo">
                 <img src="assets/images/logo.png" alt="Logo">
@@ -23,15 +39,15 @@
         </nav>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
+    <!-- Seção Hero (Apresentado após login) -->
+    <section id="home" class="hero hidden">
         <h1>Bem-vindo ao Nosso Site!</h1>
         <p>Conecte-se com nossos serviços e explore novas possibilidades.</p>
         <a href="#services" class="cta-button">Saiba Mais</a>
     </section>
 
     <!-- Seção Sobre -->
-    <section id="about">
+    <section id="about" class="hidden">
         <div class="container">
             <h2>Sobre Nós</h2>
             <p>Somos uma empresa dedicada a oferecer as melhores soluções para o seu negócio. Nossa missão é ajudar nossos clientes a crescerem por meio de soluções inovadoras e personalizadas.</p>
@@ -39,7 +55,7 @@
     </section>
 
     <!-- Seção Serviços -->
-    <section id="services" class="services">
+    <section id="services" class="services hidden">
         <div class="container">
             <h2>Serviços</h2>
             <div class="service-item">
@@ -58,7 +74,7 @@
     </section>
 
     <!-- Seção Contato -->
-    <section id="contact">
+    <section id="contact" class="hidden">
         <div class="container">
             <h2>Contato</h2>
             <p>Fale conosco para mais informações ou para agendar uma consulta.</p>
@@ -78,9 +94,10 @@
     </section>
 
     <!-- Rodapé -->
-    <footer>
+    <footer class="hidden">
         <p>&copy; 2025 Todos os direitos reservados.</p>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>
