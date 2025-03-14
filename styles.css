@@ -53,6 +53,7 @@ p {
     margin-bottom: 30px;
 }
 
+/* Torna a imagem redonda */
 .logo {
     width: 150px; /* Define a largura da logo */
     height: 150px; /* Define a altura para ser igual à largura */
