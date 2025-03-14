@@ -6,9 +6,16 @@ function handleLogin(event) {
 
     // Simulação de verificação de login (pode ser substituído por autenticação real)
     if (username === "brenogomesmundial" && password === "09042008") {
-        alert("Login bem-sucedido!");
-        // Redirecionar ou alterar para uma página de conteúdo (apenas exemplo de alert)
-        window.location.href = "home.html"; // Você pode criar uma página home.html ou redirecionar conforme necessário
+        // Esconde a página de login e exibe o conteúdo do site
+        document.getElementById("login").style.display = "none";
+
+        // Remove a classe 'hidden' para exibir as seções
+        document.getElementById("header").classList.remove("hidden");
+        document.getElementById("home").classList.remove("hidden");
+        document.getElementById("about").classList.remove("hidden");
+        document.getElementById("services").classList.remove("hidden");
+        document.getElementById("contact").classList.remove("hidden");
+        document.querySelector("footer").classList.remove("hidden");
     } else {
         alert("Usuário ou senha incorretos.");
     }
