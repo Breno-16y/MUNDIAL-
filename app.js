@@ -1,21 +1,20 @@
-// Função de login simulada
+// Função de login
 function handleLogin(event) {
-    event.preventDefault(); // Impede o envio do formulário
+    event.preventDefault();
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const successMessage = document.getElementById("successMessage");
 
-    // Simulação de verificação de login (pode ser substituído por autenticação real)
+    // Simulação de verificação de login (substitua com um backend real)
     if (username === "brenogomesmundial" && password === "09042008") {
         // Exibe a mensagem de sucesso
-        const successMessage = document.getElementById("success-message");
-        successMessage.classList.remove("hidden");
-        successMessage.classList.add("visible");
+        successMessage.style.display = "block";
 
-        // Redireciona para a página inicial (home.html) após login bem-sucedido
+        // Aguarda 2 segundos e redireciona para a home
         setTimeout(() => {
-            window.location.href = "home.html"; // Redireciona para a página home
-        }, 2000); // Espera 2 segundos antes de redirecionar
+            window.location.href = "home.html";
+        }, 2000);
     } else {
         alert("Usuário ou senha incorretos.");
     }
@@ -24,5 +23,5 @@ function handleLogin(event) {
 // Função de logout
 function logout() {
     alert("Você foi desconectado.");
-    window.location.href = "index.html"; // Redireciona de volta para a página de login (index.html)
+    window.location.href = "index.html"; // Redireciona de volta para a página de login
 }
