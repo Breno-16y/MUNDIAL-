@@ -6,16 +6,9 @@ function handleLogin(event) {
 
     // Simulação de verificação de login (pode ser substituído por autenticação real)
     if (username === "brenogomesmundial" && password === "09042008") {
-        // Esconde a página de login e exibe o conteúdo do site
-        document.getElementById("login").style.display = "none";
-
-        // Remove a classe 'hidden' para exibir as seções
-        document.getElementById("header").classList.remove("hidden");
-        document.getElementById("home").classList.remove("hidden");
-        document.getElementById("about").classList.remove("hidden");
-        document.getElementById("services").classList.remove("hidden");
-        document.getElementById("contact").classList.remove("hidden");
-        document.querySelector("footer").classList.remove("hidden");
+        // Esconde a página de login e exibe a página de perfil
+        document.getElementById("login").style.display = "none"; // Esconde o formulário de login
+        document.getElementById("profile").classList.remove("hidden"); // Exibe a página de perfil
     } else {
         alert("Usuário ou senha incorretos.");
     }
