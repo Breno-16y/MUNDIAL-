@@ -55,7 +55,9 @@ p {
 
 .logo {
     width: 150px; /* Define a largura da logo */
-    height: auto; /* A altura será ajustada proporcionalmente */
+    height: 150px; /* Define a altura para ser igual à largura */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Faz a imagem se ajustar corretamente ao tamanho */
     margin-bottom: 20px;
 }
 
