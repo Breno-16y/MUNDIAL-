@@ -12,15 +12,11 @@ function handleLogin(event) {
         successMessage.classList.remove("hidden");
         successMessage.classList.add("visible");
 
-        // Exibe o alerta de login bem-sucedido
-        alert("Login bem-sucedido!");
-
-        // Aguarda 2 segundos antes de redirecionar para a página inicial
+        // Redireciona para a página inicial (home.html) após login bem-sucedido
         setTimeout(() => {
             window.location.href = "home.html"; // Redireciona para a página home
-        }, 2000); // 2 segundos para mostrar a mensagem antes de redirecionar
+        }, 2000); // Espera 2 segundos antes de redirecionar
     } else {
-        // Exibe um alerta se o login falhar
         alert("Usuário ou senha incorretos.");
     }
 }
