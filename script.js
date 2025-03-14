@@ -8,6 +8,8 @@ function handleLogin(event) {
     if (username === "brenogomesmundial" && password === "09042008") {
         // Esconde a página de login e exibe o conteúdo do site
         document.getElementById("login").style.display = "none";
+
+        // Remove a classe 'hidden' para exibir as seções
         document.getElementById("header").classList.remove("hidden");
         document.getElementById("home").classList.remove("hidden");
         document.getElementById("about").classList.remove("hidden");
