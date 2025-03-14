@@ -17,20 +17,7 @@ body {
     color: #333;
 }
 
-h2 {
-    color: #333;
-    font-size: 26px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-p {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 30px;
-}
-
-/* Estilos do Formulário de Login */
+/* Login Page */
 .login-page {
     display: flex;
     justify-content: center;
@@ -45,51 +32,16 @@ p {
     text-align: center;
 }
 
-.login-container {
-    width: 100%;
-}
-
-.logo-container {
-    margin-bottom: 30px;
-}
-
-/* Torna a imagem redonda */
+/* Logotipo */
 .logo {
-    width: 150px; /* Define a largura da logo */
-    height: 150px; /* Define a altura para ser igual à largura */
-    border-radius: 50%; /* Torna a imagem redonda */
-    object-fit: cover; /* Faz a imagem se ajustar corretamente ao tamanho */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
-/* Input de login */
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
+/* Botão de Login */
 .btn-login {
     width: 100%;
     padding: 12px;
@@ -106,47 +58,19 @@ p {
     background-color: #45a049;
 }
 
-.forgot-password {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.forgot-password a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    .login-page {
-        padding: 20px 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .input-group input {
-        font-size: 14px;
-    }
-
-    .btn-login {
-        font-size: 14px;
-    }
-}
-
-/* Estilos para a mensagem de sucesso */
-#success-message {
+/* Mensagem de sucesso */
+.message {
     display: none;
-    color: green;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-#success-message.visible {
-    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: green;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
