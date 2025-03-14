@@ -5,7 +5,7 @@ function handleLogin(event) {
     const password = document.getElementById("password").value;
 
     // Simulação de verificação de login (pode ser substituído por autenticação real)
-    if (username === "admin" && password === "123456") {
+    if (username === "brenomundial@gmail.com" && password === "09/04/2008") {
         // Esconde a página de login e exibe o conteúdo do site
         document.getElementById("login").style.display = "none";
         document.getElementById("header").classList.remove("hidden");
