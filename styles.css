@@ -120,65 +120,6 @@ p {
     text-decoration: underline;
 }
 
-/* Estilos da página de perfil */
-.profile-page {
-    display: none;
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
-}
-
-.profile-container {
-    width: 100%;
-    text-align: center;
-}
-
-.profile-logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.profile-info {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.profile-info label {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.profile-info span {
-    display: block;
-    font-size: 16px;
-    color: #333;
-}
-
-.btn-logout {
-    width: 100%;
-    padding: 12px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-logout:hover {
-    background-color: #c0392b;
-}
-
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     .login-page {
@@ -196,20 +137,48 @@ p {
     .btn-login {
         font-size: 14px;
     }
+}
 
-    .profile-page {
-        padding: 20px 15px;
-    }
+/* Página de Perfil - Estilos */
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fc;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    flex-direction: column;
+    text-align: center;
+}
 
-    .profile-info label {
-        font-size: 12px;
-    }
+.profile-container {
+    width: 100%;
+}
 
-    .profile-info span {
-        font-size: 14px;
-    }
+.profile-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
 
-    .btn-logout {
-        font-size: 14px;
-    }
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #e53935;
 }
