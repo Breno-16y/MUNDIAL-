@@ -54,8 +54,8 @@ p {
 }
 
 .logo {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Define a largura da logo */
+    height: auto; /* A altura será ajustada proporcionalmente */
     margin-bottom: 20px;
 }
 
