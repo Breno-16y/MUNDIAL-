@@ -1,32 +1,43 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Empresa</title>
+    <title>Página de Login - Empresa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Página de Perfil ou Página Inicial -->
-    <section id="home" class="profile-page">
-        <div class="profile-container">
+    <!-- Página de Login -->
+    <section id="login" class="login-page">
+        <div class="login-container">
             <!-- Logotipo da Empresa -->
             <div class="logo-container">
                 <!-- Substitua a URL da imagem aqui -->
                 <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
             </div>
 
-            <h2>Bem-vindo ao seu perfil!</h2>
-            <p>Olá, <strong>brenogomesmundial</strong>! Aqui estão as suas informações.</p>
+            <h2>Bem-vindo de volta!</h2>
+            <p>Por favor, insira suas credenciais para acessar sua conta.</p>
+            
+            <!-- Formulário de Login -->
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                </div>
 
-            <div class="profile-info">
-                <p><strong>Email:</strong> bre@gmail.com</p>
-                <p><strong>Data de Nascimento:</strong> 09/04/2008</p>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+
+            <div class="forgot-password">
+                <a href="#">Esqueceu sua senha?</a>
             </div>
-
-            <button class="btn-logout" onclick="logout()">Sair</button>
         </div>
     </section>
 
