@@ -10,17 +10,7 @@ function handleLogin(event) {
         loginMessage.textContent = "Login bem-sucedido!";
         loginMessage.style.opacity = "1";
         loginMessage.style.visibility = "visible";
-        // Redireciona para a página inicial (home.html) após login bem-sucedido
-        window.location.href = "home.html"; // Redireciona para a página home
-    } else {
-        alert("Usuário ou senha incorretos.");
-    }
-}
-// Função de logout
-function logout() {
-    alert("Você foi desconectado.");
-    window.location.href = "index.html"; // Redireciona de volta para a página de login (index.html)
-}
+
         setTimeout(() => {
             window.location.href = "home.html"; 
         }, 2000);
@@ -28,4 +18,3 @@ function logout() {
         alert("Usuário ou senha incorretos.");
     }
 }
- 
