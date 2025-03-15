@@ -4,19 +4,17 @@ function handleLogin(event) {
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const successMessage = document.getElementById("successMessage");
+    const loginModal = document.getElementById("loginModal");
 
-    // Simulação de verificação de login (substitua com um backend real)
+    // Simulação de verificação de login
     if (username === "brenogomesmundial" && password === "09042008") {
-        // Exibe a mensagem de sucesso
-        successMessage.style.display = "block";
+        // Exibe o modal de sucesso
+        loginModal.style.display = "flex";
 
-        // Aguarda 2 segundos, depois oculta a mensagem e redireciona
+        // Aguarda 2 segundos, depois fecha o modal e redireciona
         setTimeout(() => {
-            successMessage.style.opacity = "0"; // Suaviza a saída
-            setTimeout(() => {
-                window.location.href = "home.html"; // Redireciona após a mensagem sumir
-            }, 500);
+            loginModal.style.display = "none"; // Esconde a mensagem
+            window.location.href = "home.html"; // Redireciona para a página inicial
         }, 2000);
     } else {
         alert("Usuário ou senha incorretos.");
