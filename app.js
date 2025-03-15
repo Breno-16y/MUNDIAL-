@@ -4,7 +4,15 @@ function handleLogin(event) {
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const loginMessage = document.getElementById("login-message");
+    let loginMessage = document.getElementById("login-message");
+
+    // Se a div de mensagem não existe, cria dinamicamente
+    if (!loginMessage) {
+        loginMessage = document.createElement("div");
+        loginMessage.id = "login-message";
+        loginMessage.classList.add("login-message");
+        document.body.appendChild(loginMessage);
+    }
 
     // Simulação de credenciais corretas
     if (username === "brenogomesmundial" && password === "09042008") {
@@ -37,10 +45,10 @@ function checkLogin() {
     const isLoggedIn = sessionStorage.getItem("loggedIn");
     const currentPage = window.location.pathname;
 
-    if (isLoggedIn === "true" && currentPage.includes("index.html")) {
+    if (isLoggedIn === "true" && (currentPage === "/" || currentPage.endsWith("index.html"))) {
         // Se já está logado e tentar acessar index.html, redireciona para home
         window.location.href = "home.html";
-    } else if (!isLoggedIn && currentPage.includes("home.html")) {
+    } else if (!isLoggedIn && currentPage.endsWith("home.html")) {
         // Se não está logado e tentar acessar home.html, redireciona para login
         window.location.href = "index.html";
     }
