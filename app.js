@@ -20,4 +20,3 @@ function logout() {
     alert("Você foi desconectado.");
     window.location.href = "index.html"; // Redireciona de volta para a página de login (index.html)
 }
-
