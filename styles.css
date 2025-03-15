@@ -17,7 +17,7 @@ body {
     color: #333;
 }
 
-/* Login Page */
+/* Estilização da página de login */
 .login-page {
     display: flex;
     justify-content: center;
@@ -58,21 +58,44 @@ body {
     background-color: #45a049;
 }
 
-/* Mensagem de sucesso */
-.message {
+/* Estilização do modal */
+.modal {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #4CAF50;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-size: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
-    font-weight: bold;
-    transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilização do conteúdo do modal */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s;
+}
+
+.modal-content h2 {
+    font-size: 22px;
+    color: #4CAF50;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
