@@ -12,6 +12,9 @@ function handleLogin(event) {
         loginMessage.style.opacity = "1";
         loginMessage.style.visibility = "visible";
 
+        // Armazena login na sessão
+        sessionStorage.setItem("loggedIn", "true");
+
         // Aguarda 2 segundos antes de redirecionar
         setTimeout(() => {
             window.location.href = "home.html"; // Redireciona para a página home
@@ -23,18 +26,21 @@ function handleLogin(event) {
 
 // Função de logout
 function logout() {
+    sessionStorage.removeItem("loggedIn"); // Remove o estado de login
     alert("Você foi desconectado.");
     window.location.href = "index.html"; // Redireciona para a página de login
 }
 
-// Verifica se o usuário está autenticado e redireciona para home.html se já estiver logado
+// Função para verificar se o usuário está autenticado e redirecioná-lo
 function checkLogin() {
     const isLoggedIn = sessionStorage.getItem("loggedIn");
 
-    if (isLoggedIn === "true") {
-        window.location.href = "home.html"; // Redireciona se já estiver logado
+    if (isLoggedIn === "true" && window.location.pathname.includes("index.html")) {
+        window.location.href = "home.html"; // Se já estiver logado, redireciona para home
+    } else if (!isLoggedIn && window.location.pathname.includes("home.html")) {
+        window.location.href = "index.html"; // Se não estiver logado, volta para login
     }
 }
 
-// Chama checkLogin() quando a página de login carrega
+// Verifica o login sempre que a página carregar
 document.addEventListener("DOMContentLoaded", checkLogin);
