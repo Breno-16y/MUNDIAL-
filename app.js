@@ -18,3 +18,15 @@ function handleLogin(event) {
         alert("Usuário ou senha incorretos.");
     }
 }
+  // Redireciona para a página inicial (home.html) após login bem-sucedido
+        window.location.href = "home.html"; // Redireciona para a página home
+    } else {
+        alert("Usuário ou senha incorretos.");
+    }
+}
+
+// Função de logout
+function logout() {
+    alert("Você foi desconectado.");
+    window.location.href = "index.html"; // Redireciona de volta para a página de login (index.html)
+}
