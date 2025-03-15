@@ -1,22 +1,35 @@
-// Função de login simulada
-function handleLogin(event) {
-    event.preventDefault();
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Empresa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    <!-- Página de Perfil ou Página Inicial -->
+    <section id="home" class="profile-page">
+        <div class="profile-container">
+            <!-- Logotipo da Empresa -->
+            <div class="logo-container">
+                <!-- Substitua a URL da imagem aqui -->
+                <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
+            </div>
 
-    // Simulação de verificação de login (pode ser substituído por autenticação real)
-    if (username === "brenogomesmundial" && password === "09042008") {
-        alert("Login bem-sucedido!");
-        // Redireciona para a página inicial (home.html) após login bem-sucedido
-        window.location.href = "home.html"; // Redireciona para a página home
-    } else {
-        alert("Usuário ou senha incorretos.");
-    }
-}
+            <h2>Bem-vindo ao seu perfil!</h2>
+            <p>Olá, <strong>brenogomesmundial</strong>! Aqui estão as suas informações.</p>
 
-// Função de logout
-function logout() {
-    alert("Você foi desconectado.");
-    window.location.href = "index.html"; // Redireciona de volta para a página de login (index.html)
-}
+            <div class="profile-info">
+                <p><strong>Email:</strong> bre@gmail.com</p>
+                <p><strong>Data de Nascimento:</strong> 09/04/2008</p>
+            </div>
+
+            <button class="btn-logout" onclick="logout()">Sair</button>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
