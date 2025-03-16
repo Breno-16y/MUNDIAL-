@@ -1,4 +1,4 @@
-// Função de login simulada
+// Função de login
 function handleLogin(event) {
     event.preventDefault();
 
@@ -14,63 +14,50 @@ function handleLogin(event) {
         document.body.appendChild(loginMessage);
     }
 
-    // Simulação de credenciais corretas
-    if (username === "brenogomesmundial" && password === "09042008") {
-        // Armazena login na sessão
+    // Verificação de login com duas opções válidas
+    if (
+        (username === "brenogomesmundial" && password === "09042008") ||
+        (username === "admin" && password === "1234")
+    ) {
         sessionStorage.setItem("loggedIn", "true");
 
-        // Exibe mensagem de sucesso
         loginMessage.textContent = "Login bem-sucedido!";
         loginMessage.style.opacity = "1";
         loginMessage.style.visibility = "visible";
+        loginMessage.style.color = "green";
 
-        // Redireciona após 2 segundos
+        // Redirecionamento personalizado
+        const destination = (username === "admin") ? "produtos.html" : "home.html";
         setTimeout(() => {
-            window.location.href = "home.html";
+            window.location.href = destination;
         }, 2000);
     } else {
-        alert("Usuário ou senha incorretos.");
+        loginMessage.textContent = "Usuário ou senha incorretos.";
+        loginMessage.style.opacity = "1";
+        loginMessage.style.visibility = "visible";
+        loginMessage.style.color = "red";
     }
 }
 
 // Função de logout
 function logout() {
-    sessionStorage.removeItem("loggedIn"); // Remove login da sessão
+    sessionStorage.removeItem("loggedIn");
     alert("Você foi desconectado.");
-    window.location.href = "index.html"; // Redireciona para a página de login
+    window.location.href = "index.html";
 }
 
-// Verifica se o usuário está autenticado e redireciona para a página correta
+// Verificação de login ao carregar a página
 function checkLogin() {
     const isLoggedIn = sessionStorage.getItem("loggedIn");
     const currentPage = window.location.pathname;
 
-    if (isLoggedIn === "true" && (currentPage === "/" || currentPage.endsWith("index.html"))) {
-        // Se já está logado e tentar acessar index.html, redireciona para home
+    if (isLoggedIn === "true" && (currentPage.endsWith("/") || currentPage.endsWith("index.html"))) {
         window.location.href = "home.html";
     } else if (!isLoggedIn && currentPage.endsWith("home.html")) {
-        // Se não está logado e tentar acessar home.html, redireciona para login
         window.location.href = "index.html";
     }
 }
 
-// Executa a verificação de login ao carregar a página
+// Executa verificação de login após carregamento da página
 document.addEventListener("DOMContentLoaded", checkLogin);
-
-function handleLogin(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Login de exemplo (pode ser ajustado com backend no futuro)
-    if (username === 'admin' && password === '1234') {
-        // Redirecionar para produtos.html
-        window.location.href = 'produtos.html';
-    } else {
-        const messageDiv = document.getElementById('login-message');
-        messageDiv.textContent = 'Usuário ou senha incorretos.';
-        messageDiv.style.color = 'red';
-    }
-}
 
