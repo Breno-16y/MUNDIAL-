@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .container {
+            width: 85%;
+            margin: 30px auto;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product-item h3 {
+            font-size: 1.5rem;
+            color: #ff6600;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+        .product-item .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            background-color: #005fa8;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #004b8c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Produtos
+</header>
+
+<div class="container">
+    <div class="product-list">
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Produto 1">
+            <h3>Produto 1</h3>
+            <p>Descrição do produto 1.</p>
+            <p class="price">R$ 10,00</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Produto 2">
+            <h3>Produto 2</h3>
+            <p>Descrição do produto 2.</p>
+            <p class="price">R$ 20,00</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150" alt="Produto 3">
+            <h3>Produto 3</h3>
+            <p>Descrição do produto 3.</p>
+            <p class="price">R$ 30,00</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+    </div>
+</div>
+
+</body>
+</html>
