@@ -1,30 +1,36 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Empresa</title>
+    <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Página de Perfil ou Página Inicial -->
-    <section id="home" class="profile-page">
-        <div class="profile-container">
-            <!-- Logotipo da Empresa -->
-            <div class="logo-container">
-                <!-- Substitua a URL da imagem aqui -->
-                <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
-            </div>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
 
-            <h2>Bem-vindo ao seu perfil!</h2>
-            <p>Olá, <strong>brenogomesmundial</strong>! Aqui estão as suas informações.</p>
-
-            <div class="profile-info">
-                <p><strong>Email:</strong> bre@gmail.com</p>
-                <p><strong>Data de Nascimento:</strong> 09/04/2008</p>
+    <!-- Seção do Perfil -->
+    <section class="profile-container">
+        <div class="profile-card">
+            <!-- Foto do Perfil -->
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/150" alt="Foto do Perfil">
             </div>
+            
+            <h2>Bem-vindo, <span id="username-display">Usuário</span>!</h2>
+            <p class="email"><strong>Email:</strong> <span id="email-display">usuario@email.com</span></p>
+            <p class="birthdate"><strong>Data de Nascimento:</strong> <span id="dob-display">01/01/2000</span></p>
 
             <button class="btn-logout" onclick="logout()">Sair</button>
         </div>
