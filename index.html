@@ -1,47 +1,105 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login - Empresa</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Página de Login -->
-    <section id="login" class="login-page">
-        <div class="login-container">
-            <!-- Logotipo da Empresa -->
-            <div class="logo-container">
-                <!-- Substitua a URL da imagem aqui -->
-                <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
-            </div>
-
-            <h2>Bem-vindo de volta!</h2>
-            <p>Por favor, insira suas credenciais para acessar sua conta.</p>
-            
-            <!-- Formulário de Login -->
-            <form id="login-form" onsubmit="handleLogin(event)">
-                <div class="input-group">
-                    <label for="username">Usuário:</label>
-                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-                </div>
-
-                <button type="submit" class="btn-login">Entrar</button>
-            </form>
-
-            <div class="forgot-password">
-                <a href="#">Esqueceu sua senha?</a>
-            </div>
-        </div>
-    </section>
-
-    <script src="app.js"></script>
-</body>
-</html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Produtos - Supermercado</title>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+ 
+ 
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <title>Produtos - Supermercado</title>
+     <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
+ 
+     <header class="header">
+         <div class="logo-container">
+             <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
+         </div>
+         <h1>Produtos em Oferta</h1>
+ 
+         <!-- Barra de pesquisa -->
+         <input type="text" id="search-input" placeholder="Buscar produtos..." oninput="searchProducts()" class="search-bar"/>
+     </header>
+ 
+     <main class="product-list" id="product-list">
+         <!-- Produto 1 -->
+         <div class="product-card" data-name="arroz">
+             <img src="https://via.placeholder.com/150" alt="Arroz" class="product-image">
+             <h2>Arroz 5kg</h2>
+             <p>R$ 25,99</p>
+             <button class="btn-comprar" onclick="addToCart('Arroz 5kg', 25.99)">Adicionar ao Carrinho</button>
+         </div>
+ 
+         <!-- Produto 2 -->
+         <div class="product-card" data-name="feijão">
+             <img src="https://via.placeholder.com/150" alt="Feijão" class="product-image">
+             <h2>Feijão 1kg</h2>
+             <p>R$ 7,49</p>
+             <button class="btn-comprar" onclick="addToCart('Feijão 1kg', 7.49)">Adicionar ao Carrinho</button>
+         </div>
+ 
+         <!-- Produto 3 -->
+         <div class="product-card" data-name="óleo">
+             <img src="https://via.placeholder.com/150" alt="Óleo" class="product-image">
+             <h2>Óleo de Soja</h2>
+             <p>R$ 6,99</p>
+             <button class="btn-comprar" onclick="addToCart('Óleo de Soja', 6.99)">Adicionar ao Carrinho</button>
+         </div>
+ 
+         <!-- Adicione mais produtos conforme necessário -->
+     </main>
+ 
+     <!-- Carrinho -->
+     <aside class="carrinho">
+         <h2>Carrinho</h2>
+         <ul id="cart-items"></ul>
+         <p>Total: R$ <span id="cart-total">0.00</span></p>
+     </aside>
+ 
+     <script>
+         // Pesquisa de produtos
+         function searchProducts() {
+             const input = document.getElementById('search-input').value.toLowerCase();
+             const products = document.querySelectorAll('.product-card');
+ 
+             products.forEach(product => {
+                 const name = product.getAttribute('data-name');
+                 if (name.includes(input)) {
+                     product.style.display = 'block';
+                 } else {
+                     product.style.display = 'none';
+                 }
+             });
+         }
+ 
+         // Carrinho
+         let cart = [];
+         function addToCart(name, price) {
+             cart.push({ name, price });
+ 
+             const cartList = document.getElementById('cart-items');
+             const totalSpan = document.getElementById('cart-total');
+ 
+             // Atualiza a lista de itens
+             cartList.innerHTML = '';
+             let total = 0;
+             cart.forEach(item => {
+                 const li = document.createElement('li');
+                 li.textContent = `${item.name} - R$ ${item.price.toFixed(2)}`;
+                 cartList.appendChild(li);
+                 total += item.price;
+             });
+ 
+             totalSpan.textContent = total.toFixed(2);
+         }
+     </script>
+ </body>
+ </html>
