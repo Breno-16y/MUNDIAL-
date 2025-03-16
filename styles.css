@@ -1,161 +1,146 @@
 /* Resetando estilos padrões */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos gerais */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
-}
-
-/* Container principal da página de login */
-.login-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 450px;
-    flex-direction: column;
-    text-align: center;
-}
-
-/* Logotipo */
-.logo-container {
-    margin-bottom: 30px;
-}
-
-.logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff7b00; /* Borda laranja */
-}
-
-/* Título e textos */
-h2 {
-    color: #0056b3; /* Azul escuro */
-    font-size: 26px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-p {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-/* Input de login */
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-    width: 100%;
-}
-
-.input-group label {
-    display: block;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: #ff7b00; /* Laranja */
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(255, 123, 0, 0.5);
-}
-
-/* Botão de login */
-.btn-login {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #ff7b00, #0056b3);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-login:hover {
-    background: linear-gradient(90deg, #0056b3, #ff7b00);
-    transform: scale(1.05);
-}
-
-/* Esqueceu a senha */
-.forgot-password {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.forgot-password a {
-    color: #ff7b00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-/* Mensagem de login bem-sucedido */
-.login-message {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ff7b00;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s;
-.show-password-btn {
-    margin-top: 8px;
-    background-color: #e0e0e0;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-.show-password-btn:hover {
-    background-color: #bdbdbd;
-}
-
-}
-
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ /* Estilos gerais */
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #f4f7fc;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+     color: #333;
+ }
+ 
+ /* Container principal da página de login */
+ .login-page {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
+     padding: 40px 30px;
+     border-radius: 12px;
+     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+     width: 100%;
+     max-width: 450px;
+     flex-direction: column;
+     text-align: center;
+ }
+ 
+ /* Logotipo */
+ .logo-container {
+     margin-bottom: 30px;
+ }
+ 
+ .logo {
+     width: 200px;
+     height: 200px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 3px solid #ff7b00; /* Borda laranja */
+ }
+ 
+ /* Título e textos */
+ h2 {
+     color: #0056b3; /* Azul escuro */
+     font-size: 26px;
+     margin-bottom: 10px;
+     font-weight: 600;
+ }
+ 
+ p {
+     color: #555;
+     font-size: 14px;
+     margin-bottom: 20px;
+ }
+ 
+ /* Input de login */
+ .input-group {
+     margin-bottom: 20px;
+     text-align: left;
+     width: 100%;
+ }
+ 
+ .input-group label {
+     display: block;
+     font-size: 14px;
+     color: #333;
+     margin-bottom: 8px;
+     font-weight: bold;
+ }
+ 
+ .input-group input {
+     width: 100%;
+     padding: 12px;
+     border: 2px solid #ddd;
+     border-radius: 8px;
+     font-size: 16px;
+     background-color: #fff;
+     transition: all 0.3s ease;
+ }
+ 
+ .input-group input:focus {
+     border-color: #ff7b00; /* Laranja */
+     outline: none;
+     box-shadow: 0px 0px 8px rgba(255, 123, 0, 0.5);
+ }
+ 
+ /* Botão de login */
+ .btn-login {
+     width: 100%;
+     padding: 12px;
+     background: linear-gradient(90deg, #ff7b00, #0056b3);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+ 
+ .btn-login:hover {
+     background: linear-gradient(90deg, #0056b3, #ff7b00);
+     transform: scale(1.05);
+ }
+ 
+ /* Esqueceu a senha */
+ .forgot-password {
+     margin-top: 15px;
+     font-size: 14px;
+ }
+ 
+ .forgot-password a {
+     color: #ff7b00;
+     text-decoration: none;
+     font-weight: bold;
+ }
+ 
+ .forgot-password a:hover {
+     text-decoration: underline;
+ }
+ 
+ /* Mensagem de login bem-sucedido */
+ .login-message {
+     position: fixed;
+     top: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: #ff7b00;
+     color: white;
+     padding: 15px 20px;
+     border-radius: 5px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+     font-size: 16px;
+     font-weight: bold;
+     text-align: center;
+     z-index: 1000;
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.5s ease-in-out, visibility 0.5s;
+ }
