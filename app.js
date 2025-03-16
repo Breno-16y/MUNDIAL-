@@ -56,3 +56,21 @@ function checkLogin() {
 
 // Executa a verificação de login ao carregar a página
 document.addEventListener("DOMContentLoaded", checkLogin);
+
+function handleLogin(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Login de exemplo (pode ser ajustado com backend no futuro)
+    if (username === 'admin' && password === '1234') {
+        // Redirecionar para produtos.html
+        window.location.href = 'produtos.html';
+    } else {
+        const messageDiv = document.getElementById('login-message');
+        messageDiv.textContent = 'Usuário ou senha incorretos.';
+        messageDiv.style.color = 'red';
+    }
+}
+
