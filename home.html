@@ -3,34 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Usuário</title>
+    <title>Página Inicial - Perfil</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Barra de Navegação -->
-    <nav class="navbar">
-        <div class="nav-logo">
-            <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Configurações</a></li>
-            <li><a href="#" onclick="logout()">Sair</a></li>
-        </ul>
-    </nav>
-
-    <!-- Seção do Perfil -->
-    <section class="profile-container">
-        <div class="profile-card">
-            <!-- Foto do Perfil -->
-            <div class="profile-image">
-                <img src="https://via.placeholder.com/150" alt="Foto do Perfil">
+    <section id="home" class="profile-page">
+        <div class="profile-container">
+            <div class="logo-container">
+                <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Empresa" class="logo">
             </div>
-            
-            <h2>Bem-vindo, <span id="username-display">Usuário</span>!</h2>
-            <p class="email"><strong>Email:</strong> <span id="email-display">usuario@email.com</span></p>
-            <p class="birthdate"><strong>Data de Nascimento:</strong> <span id="dob-display">01/01/2000</span></p>
+
+            <h2>Bem-vindo, <span id="username-display">brenogomesmundial</span>!</h2>
+            <p>Essas são suas informações cadastradas:</p>
+
+            <div class="profile-info">
+                <p><strong>Email:</strong> bre@gmail.com</p>
+                <p><strong>Data de Nascimento:</strong> 09/04/2008</p>
+            </div>
 
             <button class="btn-logout" onclick="logout()">Sair</button>
         </div>
