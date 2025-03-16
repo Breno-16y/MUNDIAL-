@@ -18,7 +18,7 @@ function handleLogin(event) {
 
         // Redireciona após 2 segundos
         setTimeout(() => {
-            window.location.href = "home.html";
+            window.location.href = "home.html"; // Redirecionamento após login
         }, 2000);
     } else {
         alert("Usuário ou senha incorretos.");
@@ -37,12 +37,12 @@ function checkLogin() {
     const isLoggedIn = sessionStorage.getItem("loggedIn");
     const currentPage = window.location.pathname;
 
+    // Verifica se o usuário está logado ao tentar acessar a página de login
     if (isLoggedIn === "true" && currentPage.includes("index.html")) {
-        // Se já está logado e tentar acessar index.html, redireciona para home
-        window.location.href = "home.html";
-    } else if (!isLoggedIn && currentPage.includes("home.html")) {
+        window.location.href = "home.html"; // Se já está logado, vai para home
+    } else if (isLoggedIn === "null" && currentPage.includes("home.html")) {
         // Se não está logado e tentar acessar home.html, redireciona para login
-        window.location.href = "index.html";
+        window.location.href = "index.html"; 
     }
 }
 
