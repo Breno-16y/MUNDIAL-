@@ -27,7 +27,7 @@ function handleLogin(event) {
         loginMessage.style.color = "green";
 
         // Redirecionamento personalizado
-        const destination = (username === "admin") ? "produtos.html" : "home.html";
+        const destination = (username === "brenogomesmundial") ? "produtos.html" : "home.html";
         setTimeout(() => {
             window.location.href = destination;
         }, 2000);
