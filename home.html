@@ -1,35 +1,149 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial - Empresa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Perfil Profissional</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .container {
+            width: 85%;
+            margin: 30px auto;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 4px solid #ff6600;
+        }
+        .profile-header h1 {
+            color: #333;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .profile-header p {
+            color: #777;
+            font-size: 1.1rem;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #ff6600;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .skills ul, .experience ul, .education ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li, .experience li, .education li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .skills li::before, .experience li::before, .education li::before {
+            content: "•";
+            color: #ff6600;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #005fa8;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #004b8c;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Página de Perfil ou Página Inicial -->
-    <section id="home" class="profile-page">
-        <div class="profile-container">
-            <!-- Logotipo da Empresa -->
-            <div class="logo-container">
-                <!-- Substitua a URL da imagem aqui -->
-                <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
-            </div>
+<header>
+    Perfil Profissional
+</header>
 
-            <h2>Bem-vindo ao seu perfil!</h2>
-            <p>Olá, <strong>brenogomesmundial</strong>! Aqui estão as suas informações.</p>
+<div class="container">
 
-            <div class="profile-info">
-                <p><strong>Email:</strong> funcionario*******@gmail.com</p>
-                <p><strong>Data de Nascimento:</strong> 09/04/2008</p>
-            </div>
-
-            <button class="btn-logout" onclick="logout()">Sair</button>
+    <!-- Cabeçalho de Perfil -->
+    <div class="profile-header">
+        <img src="sua-foto.jpg" alt="Foto do Perfil">
+        <div>
+            <h1>Seu Nome Completo</h1>
+            <p>Profissão | Especialização</p>
         </div>
-    </section>
+    </div>
 
-    <script src="app.js"></script>
+    <!-- Seção de Habilidades -->
+    <div class="section skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Desenvolvimento Web</li>
+            <li>Design Gráfico</li>
+            <li>Gestão de Projetos</li>
+            <li>Marketing Digital</li>
+        </ul>
+    </div>
+
+    <!-- Seção de Experiência -->
+    <div class="section experience">
+        <h2>Experiência Profissional</h2>
+        <ul>
+            <li><strong>Desenvolvedor Front-end</strong> na Empresa X (2019 - 2023)</li>
+            <li><strong>Designer Gráfico</strong> na Empresa Y (2017 - 2019)</li>
+        </ul>
+    </div>
+
+    <!-- Seção de Educação -->
+    <div class="section education">
+        <h2>Educação</h2>
+        <ul>
+            <li><strong>Graduação em Design Gráfico</strong>, Universidade ABC (2015 - 2019)</li>
+            <li><strong>Certificação em Desenvolvimento Web</strong>, Plataforma XYZ (2021)</li>
+        </ul>
+    </div>
+
+    <!-- Botão de Contato -->
+    <a href="mailto:seuemail@dominio.com" class="button">Entrar em Contato</a>
+
+</div>
+
 </body>
 </html>
