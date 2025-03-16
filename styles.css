@@ -144,21 +144,3 @@
      visibility: hidden;
      transition: opacity 0.5s ease-in-out, visibility 0.5s;
  }
-
-.button {
-    display: inline-block;
-    background-color: #ff6600; /* Laranja */
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #cc5200; /* Laranja mais escuro no hover */
-}
-
-
