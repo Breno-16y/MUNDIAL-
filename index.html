@@ -1,75 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login - Empresa</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="login-page">
+
+    <!-- Página de Login -->
+    <section id="login" class="login-page">
+<div id="login-message">
         <div class="login-container">
+            <!-- Logotipo da Empresa -->
             <div class="logo-container">
+                <!-- Substitua a URL da imagem aqui -->
                 <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
             </div>
+
             <h2>Bem-vindo de volta!</h2>
-            <p>Insira suas credenciais para acessar sua conta.</p>
+            <p>Por favor, insira suas credenciais para acessar sua conta.</p>
+            
+            <!-- Formulário de Login -->
             <form id="login-form" onsubmit="handleLogin(event)">
                 <div class="input-group">
                     <label for="username">Usuário:</label>
-                    <input type="text" id="username" required />
+                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
                 </div>
+
                 <div class="input-group">
                     <label for="password">Senha:</label>
-                    <input type="password" id="password" required />
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
                 </div>
+
                 <button type="submit" class="btn-login">Entrar</button>
             </form>
+
             <div class="forgot-password">
                 <a href="#">Esqueceu sua senha?</a>
             </div>
         </div>
     </section>
-    <script src="app.js"></script>
-</body>
-</html>
-
-
-
-
-
-<header class="header">
-    <div class="logo-container">
-        <img src="https://static.todososfolhetos.com/images/shops/mundial-thumbnail.png" alt="Logo Supermercados Mundial" class="logo">
-    </div>
-    <h1>Supermercado Mundial</h1>
-    <form id="search-form">
-        <input type="text" id="search-input" placeholder="Buscar produtos..." required />
-        <button type="submit">Buscar</button>
-    </form>
-</header>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Resultado da Pesquisa</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <div id="header"></div>
-
-    <main class="product-list" id="search-results">
-        <!-- Produtos filtrados via JS -->
-    </main>
-
-    <aside class="carrinho">
-        <h2>Carrinho</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: R$ <span id="cart-total">0.00</span></p>
-    </aside>
 
     <script src="app.js"></script>
 </body>
