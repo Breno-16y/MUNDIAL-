@@ -27,61 +27,61 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        }
+        h2 {
+            color: #ff6600;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
         .product {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .product img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             object-fit: cover;
             border-radius: 5px;
-            margin-bottom: 10px;
         }
-        .product h2 {
-            color: #ff6600;
-            font-size: 1.3rem;
-        }
-        .price {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 10px;
+        .product-info {
+            flex-grow: 1;
+            margin-left: 15px;
         }
         .quantity {
-            font-size: 1.2rem;
-            margin: 10px 0;
+            display: flex;
+            align-items: center;
         }
-        .button {
+        .quantity button {
             background-color: #ff6600;
             color: white;
-            padding: 8px 12px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            padding: 5px 10px;
             font-size: 1rem;
-            margin: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin: 0 5px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
             transition: background-color 0.3s;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
         }
         .button:hover {
             background-color: #cc5200;
-        }
-        .back-button {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #005fa8;
-            padding: 12px 25px;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .back-button:hover {
-            background-color: #004b8c;
         }
     </style>
 </head>
@@ -93,38 +93,105 @@
 
 <div class="container">
     <h2>Produtos Disponíveis</h2>
+    
     <div class="product">
-        <img src="https://via.placeholder.com/100" alt="Arroz">
-        <h2>Arroz</h2>
-        <p class="price">R$ 25,00</p>
-        <p class="quantity">Quantidade: <span id="qtd-arroz">0</span></p>
-        <button class="button" onclick="alterarQuantidade('arroz', 1)">+</button>
-        <button class="button" onclick="alterarQuantidade('arroz', -1)">-</button>
+        <img src="https://via.placeholder.com/80" alt="Arroz">
+        <div class="product-info">
+            <p>Arroz 5kg - R$ 25,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
     </div>
 
     <div class="product">
-        <img src="https://via.placeholder.com/100" alt="Feijão">
-        <h2>Feijão</h2>
-        <p class="price">R$ 8,50</p>
-        <p class="quantity">Quantidade: <span id="qtd-feijao">0</span></p>
-        <button class="button" onclick="alterarQuantidade('feijao', 1)">+</button>
-        <button class="button" onclick="alterarQuantidade('feijao', -1)">-</button>
+        <img src="https://via.placeholder.com/80" alt="Feijão">
+        <div class="product-info">
+            <p>Feijão 1kg - R$ 8,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
     </div>
 
-    <a href="index.html" class="back-button">Voltar</a>
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Macarrão">
+        <div class="product-info">
+            <p>Macarrão 500g - R$ 5,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Farinha de Trigo">
+        <div class="product-info">
+            <p>Farinha de Trigo 1kg - R$ 6,50</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Óleo de Soja">
+        <div class="product-info">
+            <p>Óleo de Soja 900ml - R$ 9,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Açúcar Refinado">
+        <div class="product-info">
+            <p>Açúcar Refinado 1kg - R$ 4,50</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Café em Pó">
+        <div class="product-info">
+            <p>Café em Pó 500g - R$ 12,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    
+    <div class="product">
+        <img src="https://via.placeholder.com/80" alt="Sal Refinado">
+        <div class="product-info">
+            <p>Sal Refinado 1kg - R$ 3,00</p>
+        </div>
+        <div class="quantity">
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    
+    <a href="index.html" class="button">Voltar</a>
 </div>
-
-<script>
-    function alterarQuantidade(produto, valor) {
-        let qtdElemento = document.getElementById("qtd-" + produto);
-        let quantidade = parseInt(qtdElemento.innerText);
-        
-        quantidade += valor;
-        if (quantidade < 0) quantidade = 0;
-        
-        qtdElemento.innerText = quantidade;
-    }
-</script>
 
 </body>
 </html>
