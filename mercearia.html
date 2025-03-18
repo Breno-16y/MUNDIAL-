@@ -61,7 +61,11 @@
         }
         .quantity {
             position: relative;
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
         }
         .quantity span {
             background-color: #ff6600;
@@ -74,11 +78,13 @@
         .reabastecer {
             color: blue;
             font-weight: bold;
-            font-size: 1rem;
-            position: absolute;
-            top: 0;
-            right: 0;
+            font-size: 0.9rem;
             animation: blink 1s infinite alternate;
+            text-align: center;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 100%;
         }
         @keyframes blink {
             0% { opacity: 1; }
@@ -115,7 +121,10 @@
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Arroz">
             <div class="product-info">Arroz 5kg - R$ 25,00</div>
-            <div class="quantity"><span></span><div class="reabastecer">REABASTECER!!!</div></div>
+            <div class="quantity">
+                <span></span>
+                <div class="reabastecer">REABASTECER!!!</div>
+            </div>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Feijão">
@@ -125,12 +134,18 @@
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Café em Pó">
             <div class="product-info">Café em Pó 500g - R$ 45,00</div>
-            <div class="quantity"><span></span><div class="reabastecer">REABASTECER!!!</div></div>
+            <div class="quantity">
+                <span></span>
+                <div class="reabastecer">REABASTECER!!!</div>
+            </div>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Sal Refinado">
             <div class="product-info">Sal Refinado 1kg - R$ 3,00</div>
-            <div class="quantity"><span></span><div class="reabastecer">REABASTECER!!!</div></div>
+            <div class="quantity">
+                <span></span>
+                <div class="reabastecer">REABASTECER!!!</div>
+            </div>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Macarrão">
@@ -145,7 +160,10 @@
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Óleo de Soja">
             <div class="product-info">Óleo de Soja 900ml - R$ 8,50</div>
-            <div class="quantity"><span></span><div class="reabastecer">REABASTECER!!!</div></div>
+            <div class="quantity">
+                <span></span>
+                <div class="reabastecer">REABASTECER!!!</div>
+            </div>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/120" alt="Açúcar Refinado">
