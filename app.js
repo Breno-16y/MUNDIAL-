@@ -26,8 +26,8 @@ function handleLogin(event) {
         { username: "rafaelwagnerrdossantos", password: "17032009", fullName: "Rafael Wagner dos Santos" },
         { username: "mariaclaradossantosmoura", password: "24072007", fullName: "Maria Clara dos Santos Moura" },
         { username: "mariaeduardasantosferreira", password: "31102008", fullName: "Maria Eduarda Santos Ferreira" },
-        { username: "laylagonçalvesdemolimpio", password: "31052008", fullName: "Layla Gonçalves de Molimpio" },
-        { username: "anaaliaamvantival", password: "15092005", fullName: "Ana Ália Amvantival" },
+        { username: "laylagonçalvesdemolimpio", password: "31052008", fullName: "Layla Gonçalves de M. Olimpio" },
+        { username: "anaaliaamaranteval", password: "15092005", fullName: "Ana Ália Amarante Val" },
         { username: "joaofelipeferreirasampaio", password: "05012009", fullName: "João Felipe Ferreira Sampaio" },
         { username: "marcelodesouzafreitas", password: "28052008", fullName: "Marcelo de Souza Freitas" },
         { username: "matheusmendes", password: "20102007", fullName: "Matheus Mendes" },
@@ -45,7 +45,7 @@ function handleLogin(event) {
         { username: "rafaelacristinadossantos", password: "18112006", fullName: "Rafaela Cristina dos Santos" },
         { username: "mariaeduardadossantosbraz", password: "29102008", fullName: "Maria Eduarda dos Santos Braz" },
         { username: "williampachecomachado", password: "16111983", fullName: "William Pacheco Machado" },
-        { username: "daniellimadesouza", password: "04122007", fullName: "Danielle Lima de Souza" },
+        { username: "daniellimadesouza", password: "04122007", fullName: "Daniel Lima de Souza" },
         { username: "visitante", password: "123456", fullName: "Visitante" },
         { username: "user31", password: "password31", fullName: "Usuário 31" }
     ];
