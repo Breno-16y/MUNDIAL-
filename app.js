@@ -16,38 +16,38 @@ function handleLogin(event) {
 
     // Simulação de credenciais corretas
     const validCredentials = [
-        { username: "brenogomesmundial", password: "09042008" },
-        { username: "mariaeduardaoliveiradasilva", password: "09122008" },
-        { username: "miguelaguiarcostaneto", password: "09072008" },
-        { username: "yasmincaldeiraribeiro", password: "09032006" },
-        { username: "anaclarapitzerdelima", password: "11092007" },
-        { username: "anabeatrizdonascimentopessoa", password: "26092008" },
-        { username: "marceloreispereiracosta", password: "14052009" },
-        { username: "rafaelwagnerrdossantos", password: "17032009" },
-        { username: "mariaclaradossantosmoura", password: "24072007" },
-        { username: "mariaeduardasantosferreira", password: "31102008" },
-        { username: "laylagonçalvesdemolimpio", password: "31052008" },
-        { username: "anaaliaamvantival", password: "15092005" },
-        { username: "joaofelipeferreirasampaio", password: "05012009" },
-        { username: "marcelodesouzafreitas", password: "28052008" },
-        { username: "matheusmendes", password: "20102007" },
-        { username: "nicolesantos", password: "06032008" },
-        { username: "alicevictoriaferreiradasilva", password: "10032005" },
-        { username: "sabrinabatistarocha", password: "16022006" },
-        { username: "adriellesantanamachado", password: "24102007" },
-        { username: "miguelvieirademesquita", password: "04092007" },
-        { username: "mariagabriellesilvasantosdefarias", password: "25042007" },
-        { username: "leticiamoledopereira", password: "08082008" },
-        { username: "raissadasilvalimadossantos", password: "03102006" },
-        { username: "lavinyalimaferreira", password: "15012009" },
-        { username: "mariavitoriacordeiro", password: "20122005" },
-        { username: "anaclaracostasantos", password: "10072007" },
-        { username: "rafaelacristinadossantos", password: "18112006" },
-        { username: "mariaeduardadossantosbraz", password: "29102008" },
-        { username: "williampachecomachado", password: "16111983" },
-        { username: "daniellimadesouza", password: "04122007" },
-        { username: "visitante", password: "123456" },
-        { username: "user31", password: "password31" }
+        { username: "brenogomesmundial", password: "09042008", fullName: "Breno Gomes De Lima Andrade" },
+        { username: "mariaeduardaoliveiradasilva", password: "09122008", fullName: "Maria Eduarda Oliveira Da Silva" },
+        { username: "miguelaguiarcostaneto", password: "09072008", fullName: "Miguel Aguiar Costa Neto" },
+        { username: "yasmincaldeiraribeiro", password: "09032006", fullName: "Yasmin Caldeira Ribeiro" },
+        { username: "anaclarapitzerdelima", password: "11092007", fullName: "Ana Clara Pitzer de Lima" },
+        { username: "anabeatrizdonascimentopessoa", password: "26092008", fullName: "Ana Beatriz do Nascimento Pessoa" },
+        { username: "marceloreispereiracosta", password: "14052009", fullName: "Marcelo Reis Pereira Costa" },
+        { username: "rafaelwagnerrdossantos", password: "17032009", fullName: "Rafael Wagner dos Santos" },
+        { username: "mariaclaradossantosmoura", password: "24072007", fullName: "Maria Clara dos Santos Moura" },
+        { username: "mariaeduardasantosferreira", password: "31102008", fullName: "Maria Eduarda Santos Ferreira" },
+        { username: "laylagonçalvesdemolimpio", password: "31052008", fullName: "Layla Gonçalves de Molimpio" },
+        { username: "anaaliaamvantival", password: "15092005", fullName: "Ana Ália Amvantival" },
+        { username: "joaofelipeferreirasampaio", password: "05012009", fullName: "João Felipe Ferreira Sampaio" },
+        { username: "marcelodesouzafreitas", password: "28052008", fullName: "Marcelo de Souza Freitas" },
+        { username: "matheusmendes", password: "20102007", fullName: "Matheus Mendes" },
+        { username: "nicolesantos", password: "06032008", fullName: "Nicole Santos" },
+        { username: "alicevictoriaferreiradasilva", password: "10032005", fullName: "Alice Victoria Ferreira da Silva" },
+        { username: "sabrinabatistarocha", password: "16022006", fullName: "Sabrina Batista Rocha" },
+        { username: "adriellesantanamachado", password: "24102007", fullName: "Adrielle Santana Machado" },
+        { username: "miguelvieirademesquita", password: "04092007", fullName: "Miguel Vieira de Mesquita" },
+        { username: "mariagabriellesilvasantosdefarias", password: "25042007", fullName: "Maria Gabrielle Silva Santos de Farias" },
+        { username: "leticiamoledopereira", password: "08082008", fullName: "Letícia Moledo Pereira" },
+        { username: "raissadasilvalimadossantos", password: "03102006", fullName: "Raíssa da Silva Lima dos Santos" },
+        { username: "lavinyalimaferreira", password: "15012009", fullName: "Lavínya Lima Ferreira" },
+        { username: "mariavitoriacordeiro", password: "20122005", fullName: "Maria Vitória Cordeiro" },
+        { username: "anaclaracostasantos", password: "10072007", fullName: "Ana Clara Costa Santos" },
+        { username: "rafaelacristinadossantos", password: "18112006", fullName: "Rafaela Cristina dos Santos" },
+        { username: "mariaeduardadossantosbraz", password: "29102008", fullName: "Maria Eduarda dos Santos Braz" },
+        { username: "williampachecomachado", password: "16111983", fullName: "William Pacheco Machado" },
+        { username: "daniellimadesouza", password: "04122007", fullName: "Danielle Lima de Souza" },
+        { username: "visitante", password: "123456", fullName: "Visitante" },
+        { username: "user31", password: "password31", fullName: "Usuário 31" }
     ];
 
     // Verifica se as credenciais são válidas
@@ -56,8 +56,9 @@ function handleLogin(event) {
     );
 
     if (validLogin) {
-        // Armazena login na sessão
+        // Armazena login e nome completo na sessão
         sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("fullName", validLogin.fullName); // Armazena o nome do usuário
 
         // Exibe mensagem de sucesso
         loginMessage.textContent = "Login bem-sucedido!";
@@ -76,6 +77,7 @@ function handleLogin(event) {
 // Função de logout
 function logout() {
     sessionStorage.removeItem("loggedIn"); // Remove login da sessão
+    sessionStorage.removeItem("fullName"); // Remove nome do usuário
     alert("Você foi desconectado.");
     window.location.href = "index.html"; // Redireciona para a página de login
 }
