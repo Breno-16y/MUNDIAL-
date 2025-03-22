@@ -134,7 +134,7 @@
     <!-- Cabeçalho de Perfil -->
     <div class="profile-header">
         <img src="https://media.istockphoto.com/id/1337144146/pt/vetorial/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=_XeYoSJQIN7GrE08cUQDJCo3U7yvoEp5OKpbhQzpmC0=" alt="Foto do Perfil">
-        <h1>Breno Gomes De Lima Andrade</h1>
+        <h1 id="user-name">Nome do Usuário</h1> <!-- Nome será atualizado -->
         <p>Repositor</p>
     </div>
 
@@ -154,6 +154,16 @@
     </div>
 
 </div>
+
+<script>
+    // Ao carregar a página, exibe o nome do usuário no perfil
+    document.addEventListener("DOMContentLoaded", () => {
+        const fullName = sessionStorage.getItem("fullName");
+        if (fullName) {
+            document.getElementById("user-name").textContent = fullName; // Atualiza o nome no perfil
+        }
+    });
+</script>
 
 </body>
 </html>
